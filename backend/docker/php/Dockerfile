@@ -12,23 +12,23 @@ RUN apt-get update && apt-get install -y \
     g++
 
 # install php extensions
-RUN docker-php-ext-install pdo pdo_mysql pcntl intl
+RUN docker-php-ext-install pdo pdo_mysql pcntl intl zip
 
 # Install composer
 RUN curl -s https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 # Copy the source code
-COPY . /var/www/app/
+COPY ./backend /var/www/app/
 
 # Default working directory
 WORKDIR /var/www/app/
 
 # Copy dependencies for npm and install
-COPY package.json /var/www
+COPY ./backend/package.json /var/www
 RUN npm install --production
 
 # Copy the dependancies for composer and install
-COPY composer.json /var/www
+COPY ./backend/composer.json /var/www
 RUN composer install --no-dev
 
 # Default command when server starts

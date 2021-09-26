@@ -10,7 +10,7 @@ services:
 
     app-react:
         stdin_open: true
-        container_name: "app-react"
+        container_name: app-react
         build:
             context: .
             dockerfile: ./frontend/docker/node/Dockerfile
@@ -29,7 +29,7 @@ services:
             - "8080:80"
         volumes:
             - ./backend/:/var/www/app
-            - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
+            - ./backend/docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
         depends_on:
             - app-php
             - app-mysql
@@ -57,7 +57,7 @@ services:
     app-php:
         build:
             context: .
-            dockerfile: ./docker/php/Dockerfile
+            dockerfile: ./backend/docker/php/Dockerfile
         image: app-php
         container_name: app-php
         tty: true
