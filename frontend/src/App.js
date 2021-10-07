@@ -1,11 +1,12 @@
 import { Route, Switch } from 'react-router-dom';
 
+import Layout from './components/layouts/Layout';
 import MainPage from './pages/Main';
 import TagsPage from './pages/Tags';
 
 function App() {
   return (
-    <div>
+    <Layout>
       <Switch>
         <Route path='/' exact>
           <MainPage />
@@ -14,7 +15,7 @@ function App() {
           <TagsPage />
         </Route>
       </Switch>
-    </div>
+    </Layout>
   );
 }
 

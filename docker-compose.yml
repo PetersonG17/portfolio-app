@@ -11,6 +11,7 @@ services:
     portfolio-app-react:
         stdin_open: true
         container_name: portfolio-app-react
+        command: "sh entrypoint.sh"
         build:
             context: .
             dockerfile: ./frontend/docker/node/Dockerfile
