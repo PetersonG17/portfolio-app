@@ -24,11 +24,11 @@ COPY ./backend /var/www/app/
 WORKDIR /var/www/app/
 
 # Copy dependencies for npm and install
-COPY ./backend/package.json /var/www
+COPY ./backend/package*.json /var/www/app
 RUN npm install --production
 
 # Copy the dependancies for composer and install
-COPY ./backend/composer.json /var/www
+COPY ./backend/composer*.json /var/www/app
 RUN composer install --no-dev
 
 # Default command when server starts
