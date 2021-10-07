@@ -4,22 +4,27 @@ function MainNavigation() {
 
   return (
     <header>
-      <div>React Meetups</div>
-      <nav>
-        <ul>
-          <li>
-            <Link to='/'>All Meetups</Link>
-          </li>
-          <li>
-            <Link to='/new-meetup'>Add New Meetup</Link>
-          </li>
-          <li>
-            <Link to='/favorites'>
-              My Favorites
-            </Link>
-          </li>
-        </ul>
-      </nav>
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div className="container">
+                <Link className="navbar-brand" to='/'><i class="fas fa-laptop-code"></i></Link>
+                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
+                </button>
+                <div className="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul className="navbar-nav">
+                        <li className="nav-item active">
+                            <Link className="nav-link" to='/'>About Me</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to='/skills'>Skills</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to='/projects'>Projects</Link>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
   );
 }
