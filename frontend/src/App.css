@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+.purple-progress {
+  /*background-color: #2a0a5b;*/
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(42, 10, 91, 1));
+}
+
+.progress {
+  background-color: transparent;
+}
