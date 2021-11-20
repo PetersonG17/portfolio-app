@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom';
+import classes from './Nav.module.css';
+import profile from '../../assets/john_peterson_profile_150x150.png';
 
 function Nav() {
 
@@ -6,7 +8,7 @@ function Nav() {
     <header>
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
             <div className="container">
-                <Link className="navbar-brand" to='/'><i className="fas fa-laptop-code"></i></Link>
+                <Link className="navbar-brand" to='/'><img src={profile} className={classes.profile}></img></Link>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
