@@ -18,7 +18,8 @@ services:
         ports:
             - "8000:8000"
         volumes:
-            - "/app/node_modules"
+            # Store the node modules folder in a volume for performance
+            - portfolio-app-volume:/app/node_modules
             - "./frontend/:/app"
         networks:
             - portfolio-app-network
