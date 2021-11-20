@@ -1,10 +1,11 @@
 version: "3.8"
 
 networks:
-    portfolio-app-network:
+    network:
   
 volumes:
-    portfolio-app-volume:
+    mysql:
+    node_modules:
 
 services:
 
@@ -19,10 +20,10 @@ services:
             - "8000:8000"
         volumes:
             # Store the node modules folder in a volume for performance
-            - portfolio-app-volume:/app/node_modules
+            - node_modules:/app/node_modules
             - "./frontend/:/app"
         networks:
-            - portfolio-app-network
+            - network
 
     portfolio-app-nginx:
         image: nginx:stable-alpine
@@ -36,7 +37,7 @@ services:
             - portfolio-app-php
             - portfolio-app-mysql
         networks:
-            - portfolio-app-network
+            - network
 
     portfolio-app-mysql:
         image: mysql:8.0
@@ -50,9 +51,9 @@ services:
             MYSQL_ROOT_PASSWORD: secret
         command: "--log-bin-trust-function-creators=1"
         volumes:
-            - portfolio-app-volume:/var/lib/mysql
+            - mysql:/var/lib/mysql
         networks:
-            - portfolio-app-network
+            - network
         cap_add:
             - SYS_NICE  # CAP_SYS_NICE
 
@@ -72,4 +73,4 @@ services:
         expose:
             - 9000
         networks:
-            - portfolio-app-network
+            - network

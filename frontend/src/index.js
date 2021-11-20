@@ -4,12 +4,14 @@ import { BrowserRouter } from 'react-router-dom';
 
 // Bootstrap imports
 import 'bootstrap/dist/css/bootstrap.min.css';
-import $ from 'jquery';
-import Popper from 'popper.js';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 
+// TODO: May not need these...
+// import $ from 'jquery';
+// import Popper from 'popper.js';
+
 // Font Awesome Imports
-import '@fortawesome/fontawesome-free';
+import '@fortawesome/fontawesome-free/css/all.css';
 
 import './index.css';
 import App from './App';
