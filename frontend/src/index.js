@@ -7,8 +7,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 // TODO: May not need these...
-// import $ from 'jquery';
-// import Popper from 'popper.js';
 
 // Font Awesome Imports
 import '@fortawesome/fontawesome-free/css/all.css';
