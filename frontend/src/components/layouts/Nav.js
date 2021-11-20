@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-function MainNavigation() {
+function Nav() {
 
   return (
     <header>
@@ -21,6 +21,9 @@ function MainNavigation() {
                         <li className="nav-item">
                             <Link className="nav-link" to='/projects'>Projects</Link>
                         </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to='/certifications'>Certifications</Link>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -29,4 +32,4 @@ function MainNavigation() {
   );
 }
 
-export default MainNavigation;
+export default Nav;
