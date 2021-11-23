@@ -3,11 +3,14 @@ import SkillCard from "../components/SkillCard";
 
 function SkillsPage() {
     return <div className="container">
-                <div className="row">
-                    <div className="col">
-                        Something about skills here.
+                <section className="py-1">
+                    <div className="row py-lg-5">
+                        <div className="col-lg-6 col-md-8">
+                            <h1 className="fw-light">Skills</h1>
+                            <p className="lead text-muted">Listing of skills</p>
+                        </div>
                     </div>
-                </div>
+                </section>
                 <div className="row">
                     <div className="col">
                         <SkillCard></SkillCard>
