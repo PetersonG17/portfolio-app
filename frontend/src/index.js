@@ -3,10 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 
 // Bootstrap imports
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min';
-
-// TODO: May not need these...
+import 'bootstrap/dist/css/bootstrap.css';
 
 // Font Awesome Imports
 import '@fortawesome/fontawesome-free/css/all.css';

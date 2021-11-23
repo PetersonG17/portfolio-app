@@ -1,5 +1,5 @@
 
-import Card from "../components/Card";
+import SkillCard from "../components/SkillCard";
 
 function SkillsPage() {
     return <div className="container">
@@ -10,16 +10,16 @@ function SkillsPage() {
                 </div>
                 <div className="row">
                     <div className="col">
-                        <Card></Card>
+                        <SkillCard></SkillCard>
                     </div>
                     <div className="col">
-                        <Card></Card>
+                        <SkillCard></SkillCard>
                     </div>
                     <div className="col">
-                        <Card></Card>
+                        <SkillCard></SkillCard>
                     </div>
                     <div className="col">
-                        <Card></Card>
+                        <SkillCard></SkillCard>
                     </div>
                 </div>
             </div>;

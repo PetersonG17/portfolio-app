@@ -1,6 +1,6 @@
 import '../App.css';
 
-function Card() {
+function SkillCard() {
     return <div className="card">
                 <div className="card-body">
                     <h5 className="card-title">Skill Title</h5>
@@ -11,4 +11,4 @@ function Card() {
             </div>;
 }
 
-export default Card;
+export default SkillCard;
