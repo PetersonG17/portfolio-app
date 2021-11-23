@@ -8,7 +8,6 @@ import 'bootstrap/dist/css/bootstrap.css';
 // Font Awesome Imports
 import '@fortawesome/fontawesome-free/css/all.css';
 
-import './index.css';
 import App from './App';
 
 ReactDOM.render(
